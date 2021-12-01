@@ -1,0 +1,5 @@
+1. Run server node example\ 1.\ Block\ operation/server
+2. Run autocannon -c 10 -a 100 http://localhost:3000/price to measure performance without blocking operation
+
+3. Run example 2
+node example\ 2.\ Worker/server.js 

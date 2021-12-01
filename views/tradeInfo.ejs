@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRYPTO</title>
+	<meta charset="utf-8" />
+	<style>
+		.container {
+			display: flex;
+			justify-content: start;
+    		flex-wrap: wrap;
+			margin-left: 10%;
+		}
+		.coinContainer {
+  			 margin-left: 5%;
+			 background-color: #80808026;
+    		 padding: 2%;
+			 margin-bottom: 5%;
+		}
+		td, th {
+			border: 1px solid;
+			padding: 3%;
+			font-size: 140%;
+			width: 250px;
+			text-align: end;
+		}
+		table th {
+			font-size: 120%;
+		}
+		table {
+    		border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<div class = 'container'>
+		<% for(let key in data) { %>
+			<div class='coinContainer'>
+				<h2>COIN: <%= key %></h2>
+				<table>
+					<tr>
+						<th>DEFINITION</th>
+						<th>VALUE, $</th>
+					</tr>
+					<% for(let keyRate in data[key]) { %>
+						<tr>
+						<td><%= keyRate %></td>
+						<td><%= data[key][keyRate] %></td>
+						</tr>
+					<% } %>
+				  </table>
+			</div>
+		 <% } %>
+	</div>	
+</body>
+<html>
